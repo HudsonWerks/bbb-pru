@@ -18,7 +18,7 @@ The code is primarily based on code from Douglas G. Henke with lengthier explana
 
 If it's working correctly, you should see output like:
 
-waiting for interrupt from PRU0...
-Major Tom's Test PRU program completed, event number 1
+  waiting for interrupt from PRU0...
+  Major Tom's Test PRU program completed, event number 1
 
 It should take ~5 seconds between the first line and the second. You can modify the duration in the "example.p" file. The event number will increase each time you run it.
