@@ -127,7 +127,7 @@ int main(int argc, char **argv) {
       run the program just a whole lot of times). */
    rtn = prussdrv_pru_wait_event(PRU_EVTOUT_0);
 
-   printf("Major Tom's Test PRU program completed, blast off number %d\n", rtn);
+   printf("Major Tom's Test PRU program completed. Blast off number %d\n.", rtn);
 
    /* clear the event, disable the PRU and let the library clean up */
    return pru_cleanup();
