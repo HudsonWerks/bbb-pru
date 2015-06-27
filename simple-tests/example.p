@@ -20,7 +20,7 @@
 #define PRU0_R31_VEC_VALID (1<<5)
 #define SIGNUM 3 // corresponds to PRU_EVTOUT_0
 
-#define DELAY_SECONDS 5 // adjust this to experiment
+#define DELAY_SECONDS 3 // adjust this to experiment
 #define CLOCK 200000000 // PRU is always clocked at 200MHz
 #define CLOCKS_PER_LOOP 2 // loop contains two instructions, one clock each
 #define DELAYCOUNT DELAY_SECONDS * CLOCK / CLOCKS_PER_LOOP
