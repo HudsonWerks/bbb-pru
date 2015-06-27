@@ -16,7 +16,7 @@ The code is primarily based on code from Douglas G. Henke with lengthier explana
 
    # sudo ./example
 
-If it's working correctly, you should see output like:
+If it's working correctly, you should see the following output:
 
   waiting for interrupt from PRU0...
   Major Tom's Test PRU program completed, event number 1
