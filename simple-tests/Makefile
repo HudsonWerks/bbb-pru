@@ -1,3 +1,9 @@
+# Makefile for major-tom-pru example program.
+# Run:
+#  # make
+# to assemble the PRU binary and build the C loader.
+
+
 CFLAGS+=-Wall -Werror
 LDLIBS+= -lpthread -lprussdrv
 
