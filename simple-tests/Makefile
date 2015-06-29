@@ -1,12 +1,12 @@
 CFLAGS+=-Wall -Werror
 LDLIBS+= -lpthread -lprussdrv
 
-all: example.bin example
+all: major-tom-pru.bin major-tom-pru
 
 clean:
-	rm -f example *.o *.bin
+        rm -f major-tom-pru *.o *.bin
 
-example.bin: example.p
-	pasm -b $^
+major-tom-pru.bin: major-tom-pru.p
+        pasm -b $^
 
-example: example.o
+major-tom-pru: major-tom-pru.o
