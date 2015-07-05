@@ -2,10 +2,6 @@
    Copyright (c) 2014 dhenke@mythopoeic.org
    This is free software -- see COPYING for details.
 
-   example -- demonstrate simple use of AM335x PRU_ICSS by waiting 5s
-
-   usage: sudo ./example
-
    Runs a very simple PRU program (expected to be in a file example.bin
    in the current working directory) then waits for this program to assert
    PRU_EVTOUT_0. When it does so, cleans up and exits.
@@ -14,9 +10,12 @@
    and it takes much more or less time than that to exit, you know something
    is amiss.)
 ***/
-
 /***
   Minor modifications by Charles Hamilton, 2015.
+  
+   Example file demonstrates simple use of AM335x PRU_ICSS by waiting 3s.
+
+   usage: # sudo ./major-tom-pru
   
 ***/
 
@@ -32,7 +31,7 @@
 
 Initializes the PRU specified by PRU_NUM and sets up PRU_EVTOUT_0 handler.
 
-The argument is a pointer to a nul-terminated string containing the path
+The argument is a pointer to a null-terminated string containing the path
 to the file containing the PRU program binary.
 
 Returns 0 on success, non-0 on error.
@@ -113,13 +112,13 @@ int main(int argc, char **argv) {
    }
 
    /* initialize the library, PRU and interrupt; launch our PRU program */
-   if(pru_setup("./example.bin")) {
+   if(pru_setup("./major-tom-pru.bin")) {
       pru_cleanup();
       return -1;
    }
 
    /* wait for PRU to assert the interrupt to indicate completion */
-   printf("waiting for interrupt from PRU0...\n");
+   printf("Waiting for interrupt from PRU0...\n");
 
    /* The prussdrv_pru_wait_event() function returns the number of times
       the event has taken place, as an unsigned int. There is no out-of-
@@ -127,7 +126,7 @@ int main(int argc, char **argv) {
       run the program just a whole lot of times). */
    rtn = prussdrv_pru_wait_event(PRU_EVTOUT_0);
 
-   printf("Major Tom's Test PRU program completed. Blast off number %d\n", rtn);
+   printf("PRU test program completed. Major Tom's blast off event number %d\n", rtn);
 
    /* clear the event, disable the PRU and let the library clean up */
    return pru_cleanup();
