@@ -1,4 +1,5 @@
 // Copyright (c) 2014 dhenke@mythopoeic.org
+//Minor modifications by Charles Hamilton, 2015.
 // This is free software -- see COPYING for details.
 //
 // This is a nearly-minimal PRU program. It delays for five seconds, then
@@ -28,7 +29,7 @@
 START:
         // initialize loop counter
 	MOV	r1, DELAYCOUNT
-
+	
         // wait for specified period of time
 DELAY:
 	SUB	r1, r1, 1     // decrement loop counter
