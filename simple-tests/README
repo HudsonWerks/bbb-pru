@@ -2,7 +2,7 @@ This is a simple program to help you get started with programming the Programmab
 
 The code is primarily based on code from Douglas G. Henke with lengthier explanation at http://mythopoeic.org/bbb-pru-minimal.
 
-1) To build, just type "make." This assumes you have several conditions set:
+1) To build, just type "make." This assumes you have several conditions met:
 
   a. pasm Assembly tool in $PATH
   b. prussdrv library headers (pruss_intc_mapping.h and prussdrv.h) in path /usr/include/ 
